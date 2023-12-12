@@ -42,7 +42,7 @@ function Cards() {
                 <CardItem
                   key={item.id}
                   title={item.title}
-                  src={item.source.url} // Adjust this based on your data
+                  src={item.source?.url || "/images/JP-placeholder-v2.png"} // Use placeholder if url is null
                   text={item.text}
                   label={item.label}
                   path={item.path}

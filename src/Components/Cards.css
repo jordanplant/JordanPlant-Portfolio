@@ -22,7 +22,10 @@ h1 {
 }
 
 .cards__items {
+  display: grid;
+  grid-gap: 24px; /* adjust the gap as needed */
   margin-bottom: 24px;
+  grid-template-columns: 1fr;
 }
 
 .cards__item {
@@ -30,12 +33,13 @@ h1 {
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 .cards__item__link {
   display: flex;
   flex-flow: column;
-  width: 100%;
+  width: 350px;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -93,21 +97,28 @@ h1 {
   padding: 20px 30px 30px;
 }
 
-.cards__item__text {
+.cards__item__title {
   color: #252e48;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 24px;
 }
 
+.cards__item__text {
+  color: #252e48;
+  font-size: 16px;
+  /* font-size: 18px; */
+  /* line-height: 24px; */
+}
+
 @media only screen and (min-width: 1200px) {
-  .content__blog__container {
-    width: 84%;
+  .cards__items {
+    /* width: 84%; */
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .cards__items {
-    display: flex;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
