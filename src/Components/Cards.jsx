@@ -14,12 +14,15 @@ const GET_CARD_ITEMS = gql`
       source {
         url
       }
+      githubLink
     }
   }
 `;
 
 function Cards() {
   const { loading, error, data } = useQuery(GET_CARD_ITEMS);
+
+  console.log("GraphQL Data:", data);
 
   if (loading) return <p>Loading...</p>;
   if (error) {
@@ -46,6 +49,7 @@ function Cards() {
                   text={item.text}
                   label={item.label}
                   path={item.path}
+                  githubLink={item.githubLink}
                 />
               ))}
           </ul>

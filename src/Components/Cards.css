@@ -12,7 +12,7 @@ h1 {
   flex-flow: column;
   align-items: center;
   max-width: 1120px;
-  width: 90%;
+  /* width: 90%; */
   margin: 0 auto;
 }
 
@@ -23,25 +23,72 @@ h1 {
 
 .cards__items {
   margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .cards__item {
+  flex-grow: 1;
+  margin: 10px;
   display: flex;
+  flex-direction: column;
+  border-radius: 10px; /* Adjust border-radius as needed */
+}
+/* Keyframes for animateGlow - as you provided */
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.cards__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   margin: 0 1rem;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
+  /* overflow: hidden; */
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+.cards__item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  border-radius: 10px; /* Slightly larger than the card's border-radius */
+  filter: blur(8px); /* Adjust the blur for the halo effect */
+  animation: animateGlow 10s ease infinite;
+}
+
+.cards__item {
+  flex: 1; /* Allow items to grow and shrink equally */
+  margin: 10px; /* Adjust margin as needed */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px 10px 0px 0px; /* Adjust border-radius as needed */
 }
 
 .cards__item__link {
+  font-weight: 100;
   display: flex;
   flex-flow: column;
   width: 100%;
-  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  border-radius: 10px;
   overflow: hidden;
-  text-decoration: none;
+  color: #0e1118;
 }
 
 .cards__item__pic-wrap {
@@ -54,6 +101,7 @@ h1 {
 .fade-img {
   animation-name: fade-img;
   animation-duration: 2s;
+  border-radius: 10px 10px 0px 00px;
 }
 
 .cards__item__pic-wrap::after {
@@ -83,19 +131,32 @@ h1 {
   max-height: 100%;
   object-fit: cover;
   transition: all 0.2s linear;
+  border-radius: 10px 10px 0px 00px;
 }
 
 .cards__item__img:hover {
   transform: scale(1.1);
+  border-radius: 10px 10px 0px 00px;
 }
 
 .cards__item__info {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px 30px 30px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 0px 0px 10px 10px;
 }
 
 .cards__item__text {
-  color: #252e48;
-  font-size: 18px;
+  padding-top: 10px;
+  color: #0e1118;
+  font-style: italic;
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -127,4 +188,20 @@ h1 {
   .cards__item {
     margin-bottom: 2rem;
   }
+}
+.card__github {
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+
+  cursor: pointer;
+  color: #0e1118;
+  transition: transform 0.3s ease;
+}
+
+.card__github:hover {
+  transform: scale(1.5);
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
