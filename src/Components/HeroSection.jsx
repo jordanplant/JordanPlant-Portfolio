@@ -23,7 +23,7 @@ function HeroSection() {
       {/* Your existing content */}
       <h1>Hello</h1>
       <p>I'm Jordan</p>
-      <div className="avatar"></div>
+      {/* <div className="avatar"></div> */}
       <div className="hero-btns">
         <Button
           className="btns"
