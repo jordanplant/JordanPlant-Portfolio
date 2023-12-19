@@ -4,7 +4,7 @@ import "./Skills.css";
 const Skills = () => {
   return (
     <>
-      <div className="skills-container">
+      <div className="section__container">
         <h1>Skills</h1>
         <div className="skills__icons">
           <i className="fa-brands fa-html5 fa-8x"></i>

@@ -46,3 +46,47 @@
   color: #fff;
   font-size: 100px;
 }
+h1 {
+  text-align: center;
+}
+
+.section__container {
+  padding: 4rem;
+  background: #fff;
+}
+/* ABOUT */
+.bio__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* PROJECTS */
+
+/* SKILLS */
+
+.skills-container {
+  padding: 4rem;
+  background: #fff;
+}
+
+.skills__icons {
+  padding: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  flex-wrap: wrap;
+}
+.skills__icons img {
+  height: 96px;
+  width: 96px;
+}
+
+.skills__icons > * {
+  padding: 20px;
+}

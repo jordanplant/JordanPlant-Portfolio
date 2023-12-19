@@ -20,7 +20,7 @@ const GET_CARD_ITEMS = gql`
   }
 `;
 
-function Cards() {
+function Projects() {
   const { loading, error, data } = useQuery(GET_CARD_ITEMS);
 
   console.log("GraphQL Data:", data);
@@ -41,7 +41,7 @@ function Cards() {
       : [];
 
   return (
-    <div className="cards">
+    <div className="section__container">
       <h1>Projects</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
@@ -65,4 +65,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default Projects;
