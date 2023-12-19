@@ -90,3 +90,30 @@ h1 {
 .skills__icons > * {
   padding: 20px;
 }
+
+/* CONTACT FORM */
+.contact__form {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input,
+textarea,
+button {
+  all: unset;
+  width: 100%;
+  background-color: #ffffff30;
+  padding: 10px;
+}
+
+button:active {
+  color: #000;
+  background-color: #ffffff;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #ffffff50;
+}
