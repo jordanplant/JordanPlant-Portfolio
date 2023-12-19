@@ -15,6 +15,7 @@ const GET_CARD_ITEMS = gql`
         url
       }
       githubLink
+      ranking
     }
   }
 `;
@@ -34,24 +35,29 @@ function Cards() {
     return <p>Error: {error.message}</p>;
   }
 
+  const sortedCardItems =
+    data && data.cardItems
+      ? [...data.cardItems].sort((a, b) => a.ranking - b.ranking)
+      : [];
+
   return (
     <div className="cards">
       <h1>Projects</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
-            {data &&
-              data.cardItems.map((item) => (
-                <CardItem
-                  key={item.id}
-                  title={item.title}
-                  src={item.source?.url || "/images/JP-placeholder-v2.png"} // Use placeholder if url is null
-                  text={item.text}
-                  label={item.label}
-                  path={item.path}
-                  githubLink={item.githubLink}
-                />
-              ))}
+            {sortedCardItems.map((item) => (
+              <CardItem
+                key={item.id}
+                title={item.title}
+                src={item.source?.url || "/images/JP-placeholder-v2.png"} // Use placeholder if url is null
+                text={item.text}
+                label={item.label}
+                path={item.path}
+                githubLink={item.githubLink}
+                ranking={item.ranking}
+              />
+            ))}
           </ul>
         </div>
       </div>

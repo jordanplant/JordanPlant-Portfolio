@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../app.css";
 import { Button } from "./Button";
 import "./HeroSection.css";
+import Logo from "./Logo";
 
 function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -23,6 +24,7 @@ function HeroSection() {
       {/* Your existing content */}
       <h1>Hello</h1>
       <p>I'm Jordan</p>
+
       {/* <div className="avatar"></div> */}
       <div className="hero-btns">
         <Button
