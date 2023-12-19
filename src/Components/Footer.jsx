@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./Button";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 function Footer() {
   return (
@@ -25,7 +26,7 @@ function Footer() {
         <div className="social-media-wrap">
           <div className="footer-logo">
             <Link to="/" className="social-logo">
-              Jordan Plant
+              <Logo includeSlash={true} />
             </Link>
           </div>
           {/* <small className="website-rights">JP 2023</small> */}
