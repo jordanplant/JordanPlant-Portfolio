@@ -3,24 +3,12 @@ import { Button } from "./Button";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
+import ContactForm from "./ContactForm";
 
 function Footer() {
   return (
     <div className="footer-container">
-      {/* <section className="footer-subscription">
-        <p className="footer-subscription-heading">Get in touch:</p>
-        <div className="inut-areas">
-          <form>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="footer-input"
-            />
-            <Button buttonStyle="btn--outline">Submit</Button>
-          </form>
-        </div>
-      </section> */}
+      <ContactForm />
 
       <section className="social-media">
         <div className="social-media-wrap">
