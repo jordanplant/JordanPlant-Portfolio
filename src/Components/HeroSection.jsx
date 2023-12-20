@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "../app.css";
+import "../App.css";
 import { Button } from "./Button";
 import "./HeroSection.css";
-import Logo from "./Logo";
 
 function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
