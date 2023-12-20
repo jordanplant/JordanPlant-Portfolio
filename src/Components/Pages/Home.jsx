@@ -1,5 +1,4 @@
 import React from "react";
-import "../../App.css";
 import HeroSection from "../HeroSection";
 import Projects from "../Projects";
 import Footer from "../Footer";
