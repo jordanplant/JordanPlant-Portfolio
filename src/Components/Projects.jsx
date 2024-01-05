@@ -23,11 +23,11 @@ const GET_CARD_ITEMS = gql`
 function Projects() {
   const { loading, error, data } = useQuery(GET_CARD_ITEMS);
 
-  console.log("GraphQL Data:", data);
+  console.log("PROJECTS Data:", data);
 
   if (loading) return <p>Loading...</p>;
   if (error) {
-    console.error("GraphQL Error:", error);
+    console.error("GraphQL-PROJECTS Error:", error);
     if (error.networkError) console.log("Network error:", error.networkError);
     if (error.graphQLErrors) {
       error.graphQLErrors.forEach((err) => console.log("GraphQL error:", err));
