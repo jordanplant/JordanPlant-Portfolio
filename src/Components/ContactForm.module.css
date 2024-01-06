@@ -1,7 +1,7 @@
 :root {
-  --gradientColorOne: rgba(15, 255, 193);
+  --gradientColorOne: #0fffc1;
   --gradientColorTwo: rgba(71, 135, 224);
-  --gradientColorThree: rgba(126, 15, 255);
+  --gradientColorThree: #7e0fff;
   --primaryDark: linear-gradient(
     90deg,
     rgb(28, 27, 27) 0%,
