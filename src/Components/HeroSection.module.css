@@ -18,15 +18,14 @@ video {
   object-fit: contain;
 }
 
-.hero-container > h1 {
+.hero-container h1 {
   color: #fff;
-  font-size: 100px;
-  margin-top: -30px;
+  font-size: 120px;
+  margin-top: -40px;
 }
-h2 {
-  /* color: #fff; */
-  font-size: 50px;
-  /* margin-top: -100px; */
+
+.hero-container h2 {
+  font-size: 60px;
 }
 
 .greeting {
@@ -42,42 +41,36 @@ h2 {
 }
 
 .hero-btns {
-  margin-top: 32px;
+  /* margin-top: 32px; */
+  display: flex;
+  justify-content: center;
 }
 
 .hero-btns .btn {
   margin: 6px;
 }
 
-.fa-play-circle {
-  margin-left: 4px;
-}
-
 @media screen and (max-width: 960px) {
-  .hero-container > h1 {
+  .hero-container h1 {
     font-size: 100px;
     margin-top: -30px;
   }
 
-  h2 {
+  .hero-container h2 {
     font-size: 50px;
     /* margin-top: -100px; */
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hero-container > h1 {
+  .hero-container h1 {
     font-size: 80px;
     margin-top: -20px;
   }
 
-  h2 {
+  .hero-container h2 {
     font-size: 40px;
-    /* margin-top: -100px; */
-  }
-
-  .hero-container > p {
-    font-size: 30px;
+    /* margin-top: 50px; */
   }
 
   .btn-mobile {
@@ -87,6 +80,11 @@ h2 {
   .btn {
     width: 100%;
   }
+  /* Currently not present in hero-section - keep for future */
+  .hero-container > p {
+    font-size: 10px;
+  }
+  /* Currently not present in hero-section - keep for future */
 }
 
 @keyframes animateGlow {
@@ -101,31 +99,11 @@ h2 {
   }
 }
 
-@keyframes textColor {
-  0%,
-  100% {
-    color: #7e0fff;
-  }
-  50% {
-    color: #0fffc1;
-  }
-}
-
 .avatar {
   background-color: #000;
   border-radius: 50%;
   width: 150px;
   height: 150px;
-}
-
-/* Div with Pulsing Glow */
-.hero-container {
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-  /* background-color: #151823; */
-  /* animation: textColor 10s ease infinite; */
-  overflow: hidden;
 }
 
 .hero-container::after {
@@ -154,4 +132,70 @@ h2 {
 
 .bioTwo {
   font-size: 10p;
+}
+
+/* Button */
+:root {
+  --primary: #fff;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: #242424;
+  border: 1px solid var(--primary);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 20px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.btn--medium:hover,
+.btn--large:hover {
+  background: #fff;
+  color: #242424;
+  transition: all 0.3s ease-out;
+}
+
+/* Currently not present in hero-section - keep for future */
+
+/* Div with Pulsing Glow */
+.hero-container {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  /* background-color: #151823; */
+  /* animation: textColor 10s ease infinite; */
+  overflow: hidden;
+}
+
+@keyframes textColor {
+  0%,
+  100% {
+    color: #7e0fff;
+  }
+  50% {
+    color: #0fffc1;
+  }
 }

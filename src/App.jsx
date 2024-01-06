@@ -7,6 +7,7 @@ import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import Footer from "./Components/Footer";
+import ContactForm from "./Components/ContactForm";
 
 const client = new ApolloClient({
   uri: "https://eu-west-2.cdn.hygraph.com/content/clq29w7in57pe01uq3rc71su3/master", // Replace with your Hygraph endpoint
@@ -21,6 +22,7 @@ function App() {
       <About />
       <Projects />
       <Skills />
+      <ContactForm />
       <Footer />
     </ApolloProvider>
   );

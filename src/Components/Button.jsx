@@ -1,8 +1,8 @@
 import React from "react";
-import "./Button.css";
+import styles from "./HeroSection.module.css";
 
-const STYLES = ["btn--primary", "btn--outline"];
-const SIZES = ["btn--medium", "btn--large"];
+const STYLES = [styles["btn--primary"], styles["btn--outline"]];
+const SIZES = [styles["btn--medium"], styles["btn--large"]];
 
 export const Button = ({
   children,
@@ -17,12 +17,14 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-      onClick={onClick}
-      type={type}
-    >
-      {children}
-    </button>
+    <>
+      <button
+        className={`${styles["btn"]} ${checkButtonStyle} ${checkButtonSize}`}
+        onClick={onClick}
+        type={type}
+      >
+        {children}
+      </button>
+    </>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./Skills.module.css";
 
 const SkillIcon = ({ skill }) => {
   const [hover, setHover] = useState(false); // State to manage hover
@@ -7,7 +8,7 @@ const SkillIcon = ({ skill }) => {
 
   return (
     <div
-      className={`skill__icon ${hover ? "hover" : ""}`}
+      className={`${styles["skill__icon"]} ${hover ? styles["hover"] : ""}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{ "--hover-shadow-color": iconColor }} // Using iconColor for the shadow

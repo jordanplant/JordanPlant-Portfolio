@@ -1,25 +1,32 @@
 import React from "react";
+import styles from "./Projects.module.css";
 
 function CardItem(props) {
   return (
-    <li className="cards__item">
-      <div className="cards__item__pic-wrap" data-category={props.label}>
-        <img src={props.src} alt={props.title} className="cards__item__img" />
+    <li className={styles["cards__item"]}>
+      <div
+        className={styles["cards__item__pic-wrap"]}
+        data-category={props.label}
+      >
+        <img
+          src={props.src}
+          alt={props.title}
+          className={styles["cards__item__img"]}
+        />
       </div>
-      <div className="cards__item__info">
+      <div className={styles["cards__item__info"]}>
         <a
-          className="cards__item__link"
+          className={styles["cards__item__link"]}
           href={props.path}
           // target="_blank"
           // rel="noopener noreferrer"
         >
-          <h2 className="cards__item__title">{props.title}</h2>
+          <h3 className={styles["cards__item__title"]}>{props.title}</h3>
         </a>
-        <p className="cards__item__text">{props.text}</p>
+        <p className={styles["cards__item__text"]}>{props.text}</p>
         {props.githubLink && (
           <a
-            className="card__github {
-"
+            className={styles["card__github"]}
             href={props.githubLink}
             // target="_blank"
             // rel="noopener noreferrer"

@@ -30,10 +30,6 @@ function HeroSection() {
       </h2>
       <h1>Jordan</h1>
 
-      <div className={styles["bioContainer"]}>
-        {/* <p className={styles["bioOne"]}>Hi there, I'm Jordan, ,</p> */}
-      </div>
-
       {/* <div className={styles["avatar"]}></div> */}
       <div className={styles["hero-btns"]}>
         <Button

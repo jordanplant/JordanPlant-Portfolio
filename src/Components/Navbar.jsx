@@ -58,6 +58,11 @@ function Navbar() {
               Skills
             </a>
           </li>
+          <li className="nav-item">
+            <a href="#contact" className="nav-links" onClick={closeMobileMenu}>
+              Contact
+            </a>
+          </li>
 
           {/* Add your social links here */}
         </ul>

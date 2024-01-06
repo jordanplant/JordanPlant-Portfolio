@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useQuery, gql } from "@apollo/client";
 import SkillIcon from "./SkillIcon";
+import styles from "./Skills.module.css";
 
 const GET_SKILLS = gql`
   query skills {
@@ -34,11 +35,11 @@ const Skills = () => {
 
   return (
     <>
-      <div className="section__container" id="skills">
-        <h1>Skills</h1>
-        <div className="skills__icons">{renderSkills(true)}</div>
-        <h2>Currently Learning</h2>
-        <div className="skills__icons">{renderSkills(false)}</div>
+      <div className={styles["section__container"]} id="skills">
+        <h2>Skills</h2>
+        <div className={styles["skills__icons"]}>{renderSkills(true)}</div>
+        <h3>Currently Learning</h3>
+        <div className={styles["skills__icons"]}>{renderSkills(false)}</div>
       </div>
     </>
   );

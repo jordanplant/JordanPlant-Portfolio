@@ -1,6 +1,6 @@
 import React from "react";
 import CardItem from "./CardItem";
-import "./Cards.css";
+import styles from "./Projects.module.css";
 import { useQuery, gql } from "@apollo/client";
 
 const GET_CARD_ITEMS = gql`
@@ -41,16 +41,16 @@ function Projects() {
       : [];
 
   return (
-    <div className="section__container" id="projects">
-      <h1>Projects</h1>
-      <div className="cards__container">
-        <div className="cards__wrapper">
-          <ul className="cards__items">
+    <div className={styles["section__container"]} id="projects">
+      <h2>Projects</h2>
+      <div className={styles["cards__container"]}>
+        <div className={styles["cards__wrapper"]}>
+          <ul className={styles["cards__items"]}>
             {sortedCardItems.map((item) => (
               <CardItem
                 key={item.id}
                 title={item.title}
-                src={item.source?.url || "/images/JP-placeholder-v2.png"} // Use placeholder if url is null
+                src={item.source?.url || "/images/JP-placeholder-v2.png"}
                 text={item.text}
                 label={item.label}
                 path={item.path}
