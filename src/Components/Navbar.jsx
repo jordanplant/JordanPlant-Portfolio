@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "./Button";
 import "./Navbar.css";
 import Logo from "./Logo";
 
@@ -21,65 +19,47 @@ function Navbar() {
 
   useEffect(() => {
     showButton();
-  }, []);
+    const handleResize = () => showButton();
+    window.addEventListener("resize", handleResize);
 
-  window.addEventListener("resize", showButton);
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+          <a href="#home" className="navbar-logo" onClick={closeMobileMenu}>
             <Logo />
-          </Link>
+          </a>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+            <a href="#home" className="nav-links" onClick={closeMobileMenu}>
               Home
-            </Link>
+            </a>
           </li>
           <li className="nav-item">
-            <Link
-              to="/page-one"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
-              Skills
-            </Link>
+            <a href="#about" className="nav-links" onClick={closeMobileMenu}>
+              About
+            </a>
           </li>
           <li className="nav-item">
-            <Link
-              to="/projects"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
+            <a href="#projects" className="nav-links" onClick={closeMobileMenu}>
               Projects
-            </Link>
+            </a>
           </li>
           <li className="nav-item">
-            <Link
-              className="nav-links nav-social-icon-link github"
-              to="/"
-              target="_blank"
-              aria-label="Github"
-            >
-              <i className="fa-brands fa-github"></i>
-            </Link>
+            <a href="#skills" className="nav-links" onClick={closeMobileMenu}>
+              Skills
+            </a>
           </li>
-          <li className="nav-item">
-            <Link
-              className="nav-links nav-social-icon-link twitter"
-              to="/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i className="fab fa-linkedin" />
-            </Link>
-          </li>
+
+          {/* Add your social links here */}
         </ul>
       </nav>
     </>

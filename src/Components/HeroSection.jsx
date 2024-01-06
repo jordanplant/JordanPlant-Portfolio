@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import { Button } from "./Button";
-import "./HeroSection.css";
+import styles from "./HeroSection.module.css"; // Import the CSS module as 'styles'
 
 function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -16,22 +16,32 @@ function HeroSection() {
   };
 
   return (
-    <div className="hero-container" onMouseMove={handleMouseMove}>
+    <div
+      className={styles["hero-container"]}
+      onMouseMove={handleMouseMove}
+      id="home"
+    >
       {/* Glow Effect Div */}
-      <div className="glow-effect" style={dynamicStyle}></div>
+      <div className={styles["glow-effect"]} style={dynamicStyle}></div>
 
       {/* Your existing content */}
-      <h1>Hello</h1>
-      <p>I'm Jordan</p>
+      <h2>
+        <span className={styles["greeting"]}>Hello,</span> I'm
+      </h2>
+      <h1>Jordan</h1>
 
-      {/* <div className="avatar"></div> */}
-      <div className="hero-btns">
+      <div className={styles["bioContainer"]}>
+        {/* <p className={styles["bioOne"]}>Hi there, I'm Jordan, ,</p> */}
+      </div>
+
+      {/* <div className={styles["avatar"]}></div> */}
+      <div className={styles["hero-btns"]}>
         <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
+          className={styles["btns"]}
+          buttonStyle={styles["btn--outline"]}
+          buttonSize={styles["btn--large"]}
         >
-          Get Started
+          Get started
         </Button>
         {/* Additional buttons or content */}
       </div>

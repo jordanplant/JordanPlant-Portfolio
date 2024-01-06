@@ -1,10 +1,10 @@
-import React from "react";
-import "./Skills.css";
+import React, { useState } from "react";
 import { useQuery, gql } from "@apollo/client";
+import SkillIcon from "./SkillIcon";
 
 const GET_SKILLS = gql`
   query skills {
-    skillsIcons(first: 100) {
+    skillsIcons(first: 200) {
       skill
       icon {
         url
@@ -12,6 +12,9 @@ const GET_SKILLS = gql`
       doIKnowIt
       ranking
       yearFirstUsed
+      color {
+        hex
+      }
     }
   }
 `;
@@ -19,34 +22,21 @@ const GET_SKILLS = gql`
 const Skills = () => {
   const { loading, error, data } = useQuery(GET_SKILLS);
 
-  console.log("SKILLS Data:", data);
-
   if (loading) return <p>Loading...</p>;
-  if (error) {
-    // Error handling code
-    return <p>Error: {error.message}</p>;
-  }
+  if (error) return <p>Error: {error.message}</p>;
 
   const renderSkills = (knowIt) => {
-    // Sort skills based on the rank
-    const sortedSkills = data.skillsIcons
+    return data.skillsIcons
       .filter((skill) => skill.doIKnowIt === knowIt)
-      .sort((a, b) => a.ranking - b.ranking); // Assuming 'rank' is the field name
-
-    return sortedSkills.map((skill, index) => (
-      <div key={index} className="skill">
-        <img src={skill.icon.url} alt={skill.skill} />
-        {/* You can add more details here */}
-      </div>
-    ));
+      .sort((a, b) => a.ranking - b.ranking)
+      .map((skill, index) => <SkillIcon key={index} skill={skill} />);
   };
 
   return (
     <>
-      <div className="section__container">
+      <div className="section__container" id="skills">
         <h1>Skills</h1>
         <div className="skills__icons">{renderSkills(true)}</div>
-
         <h2>Currently Learning</h2>
         <div className="skills__icons">{renderSkills(false)}</div>
       </div>

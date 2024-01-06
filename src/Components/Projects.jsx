@@ -41,7 +41,7 @@ function Projects() {
       : [];
 
   return (
-    <div className="section__container">
+    <div className="section__container" id="projects">
       <h1>Projects</h1>
       <div className="cards__container">
         <div className="cards__wrapper">

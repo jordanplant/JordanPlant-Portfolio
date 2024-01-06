@@ -1,64 +1,50 @@
 import React from "react";
 import { Button } from "./Button";
-import "./Footer.css";
-import { Link } from "react-router-dom";
+import styles from "./Footer.module.css"; // Import the CSS module as 'styles'
 import Logo from "./Logo";
 import ContactForm from "./ContactForm";
 
 function Footer() {
   return (
-    <div className="footer-container">
+    <div className={styles["footer-container"]}>
+      {" "}
       <ContactForm />
-
-      <section className="social-media">
-        <div className="social-media-wrap">
-          <div className="footer-logo">
-            <Link to="/" className="social-logo">
+      <section className={styles["social-media"]}>
+        <div className={styles["social-media-wrap"]}>
+          <div className={styles["footer-logo"]}>
+            <a href="#home" className={styles["social-logo"]}>
               <Logo includeSlash={true} />
-            </Link>
+            </a>
           </div>
-          {/* <small className="website-rights">JP 2023</small> */}
-          <div className="social-icons">
-            <Link
-              className="social-icon-link github"
-              to="/"
+          {/* <small className={styles["website-rights"]}>JP 2023</small> */}
+          <div className={styles["social-icons"]}>
+            <a
+              className={`${styles["social-icon-link"]} ${styles["github"]}`}
+              href="https://github.com/"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Github"
             >
               <i className="fa-brands fa-github"></i>
-            </Link>
-            {/* <Link
-              className="social-icon-link instagram"
-              to="/"
+            </a>
+            <a
+              className={`${styles["social-icon-link"]} ${styles["linkedin"]}`}
+              href="https://linkedin.com/"
               target="_blank"
-              aria-label="Instagram"
-            >
-              <i className="fab fa-instagram" />
-            </Link> */}
-            {/* <Link
-              className="social-icon-link twitter"
-              to="/"
-              target="_blank"
-              aria-label="Twitter"
-              >
-              <i className="fab fa-twitter" />
-            </Link> */}
-            <Link
-              className="social-icon-link twitter"
-              to="/"
-              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
               <i className="fab fa-linkedin" />
-            </Link>
-            <Link
-              className="social-icon-link youtube"
-              to="/"
+            </a>
+            <a
+              className={`${styles["social-icon-link"]} ${styles["youtube"]}`}
+              href="https://youtube.com/"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Youtube"
             >
               <i className="fab fa-youtube" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -67,39 +53,3 @@ function Footer() {
 }
 
 export default Footer;
-
-// <div className="footer-links">
-//   <div className="footer-link-wrapper">
-//     <div className="footer-link-items">
-//       <h2>About Us</h2>
-//       <Link to="/sign-up">How it works</Link>
-//       <Link to="/">Testimonials</Link>
-//       <Link to="/">Careers</Link>
-//       <Link to="/">Investors</Link>
-//       <Link to="/">Terms of Service</Link>
-//     </div>
-//     <div className="footer-link-items">
-//       <h2>Contact Us</h2>
-//       <Link to="/">Contact</Link>
-//       <Link to="/">Support</Link>
-//       <Link to="/">Destinations</Link>
-//       <Link to="/">Sponsorships</Link>
-//     </div>
-//   </div>
-//   <div className="footer-link-wrapper">
-//     <div className="footer-link-items">
-//       <h2>Videos</h2>
-//       <Link to="/">Submit Video</Link>
-//       <Link to="/">Ambassadors</Link>
-//       <Link to="/">Agency</Link>
-//       <Link to="/">Influencer</Link>
-//     </div>
-//     <div className="footer-link-items">
-//       <h2>Social Media</h2>
-//       <Link to="/">GitHub</Link>
-//       <Link to="/">LinkedIn</Link>
-//       <Link to="/">Youtube</Link>
-//       {/* <Link to="/">Twitter</Link> */}
-//     </div>
-//   </div>
-// </div>;

@@ -21,7 +21,16 @@ video {
 .hero-container > h1 {
   color: #fff;
   font-size: 100px;
-  margin-top: -100px;
+  margin-top: -30px;
+}
+h2 {
+  /* color: #fff; */
+  font-size: 50px;
+  /* margin-top: -100px; */
+}
+
+.greeting {
+  animation: textColor 7s ease infinite;
 }
 
 .hero-container > p {
@@ -46,15 +55,25 @@ video {
 
 @media screen and (max-width: 960px) {
   .hero-container > h1 {
-    font-size: 70px;
-    margin-top: -150px;
+    font-size: 100px;
+    margin-top: -30px;
+  }
+
+  h2 {
+    font-size: 50px;
+    /* margin-top: -100px; */
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero-container > h1 {
-    font-size: 50px;
-    margin-top: -100px;
+    font-size: 80px;
+    margin-top: -20px;
+  }
+
+  h2 {
+    font-size: 40px;
+    /* margin-top: -100px; */
   }
 
   .hero-container > p {
@@ -103,9 +122,9 @@ video {
 .hero-container {
   position: relative;
   text-align: center;
-  color: #252b37;
+  color: #ffffff;
   /* background-color: #151823; */
-  animation: textColor 10s ease infinite;
+  /* animation: textColor 10s ease infinite; */
   overflow: hidden;
 }
 
@@ -127,4 +146,12 @@ video {
   background: linear-gradient(270deg, #0fffc1, #7e0fff);
   background-size: 200% 200%;
   animation: animateGlow 10s ease infinite;
+}
+
+.bioContainer {
+  padding: 4rem;
+}
+
+.bioTwo {
+  font-size: 10p;
 }
