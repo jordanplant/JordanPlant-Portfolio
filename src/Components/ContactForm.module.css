@@ -50,7 +50,7 @@ button {
   border-radius: 0px;
   filter: blur(8px);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .name__inputArea:focus-within::before,
@@ -84,7 +84,7 @@ button {
   border-radius: 0px;
   filter: blur(8px);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .email__inputArea:focus-within::before,
@@ -118,7 +118,7 @@ button {
   border-radius: 0px;
   filter: blur(8px);
   opacity: 0;
-  transition: opacity 0.1s ease;
+  transition: opacity 0.3s ease-in-out;
   /* padding: 10px; */
 }
 
