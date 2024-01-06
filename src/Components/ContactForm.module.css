@@ -1,0 +1,188 @@
+:root {
+  --gradientColorOne: rgba(15, 255, 193);
+  --gradientColorTwo: rgba(71, 135, 224);
+  --gradientColorThree: rgba(126, 15, 255);
+  --primaryDark: linear-gradient(
+    90deg,
+    rgb(28, 27, 27) 0%,
+    rgb(26, 23, 23) 100%
+  );
+  --secondaryDark: #242222;
+}
+
+.section__container {
+  padding: 4rem;
+}
+
+.contact__container {
+  padding: 0rem 2rem;
+}
+
+.contact__description {
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input,
+textarea,
+button {
+  all: unset;
+  width: 100%;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.name__inputArea::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: var(--gradientColorOne);
+  border-radius: 0px;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.name__inputArea:focus-within::before,
+.name__inputArea:hover::before {
+  opacity: 1;
+}
+
+.name__inputArea {
+  position: relative;
+  z-index: 1;
+  margin: 10px 0;
+  display: flex;
+}
+
+.name__inputArea > input {
+  background-color: #fff;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.email__inputArea::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: var(--gradientColorTwo);
+  border-radius: 0px;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.email__inputArea:focus-within::before,
+.email__inputArea:hover::before {
+  opacity: 1;
+}
+
+.email__inputArea {
+  position: relative;
+  z-index: 1;
+  margin: 10px 0;
+  display: flex;
+}
+
+.email__inputArea > input {
+  background-color: #fff;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.message__textArea::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: var(--gradientColorThree);
+  border-radius: 0px;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  /* padding: 10px; */
+}
+
+.message__textArea:focus-within::before,
+.message__textArea:hover::before {
+  opacity: 1;
+}
+
+.message__textArea {
+  position: relative;
+  z-index: 1;
+  margin: 10px 0;
+  display: flex;
+}
+
+.message__textArea > textarea {
+  background-color: #fff;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+@keyframes buttonAnimateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.contact__button > button {
+  font-size: 20px;
+  background-color: #fff;
+  text-align: center;
+  padding: 5px;
+}
+
+.contact__button > button:active {
+  color: #fff;
+  background: var(--primaryDark);
+}
+
+.contact__button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  /* border-radius: 15px; */
+  filter: blur(8px);
+  animation: buttonAnimateGlow 5s ease infinite;
+}
+
+.contact__button {
+  position: relative;
+  z-index: 1;
+  margin: 10px 0;
+  display: flex;
+}

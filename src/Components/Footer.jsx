@@ -8,7 +8,6 @@ function Footer() {
   return (
     <div className={styles["footer-container"]}>
       {" "}
-      <ContactForm />
       <section className={styles["social-media"]}>
         <div className={styles["social-media-wrap"]}>
           <div className={styles["footer-logo"]}>
