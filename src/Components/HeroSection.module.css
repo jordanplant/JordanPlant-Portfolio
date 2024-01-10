@@ -1,12 +1,13 @@
-video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
+:root {
+  --primary: #fff;
+  --secondary: #242424;
+  --gradientOne: #7e0fff;
+  --gradientTwo: #0fffc1;
+  --gradientFull: linear-gradient(270deg, #0fffc1, #7e0fff);
 }
 
 .hero-container {
+  position: relative;
   background: url(#) center center/cover no-repeat;
   height: 100vh;
   width: 100%;
@@ -16,24 +17,45 @@ video {
   align-items: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
+  overflow: hidden;
+  color: var(--primary);
 }
 
-.hero-container h1 {
-  color: #fff;
-  font-size: 120px;
-  margin-top: -40px;
-}
-
-.hero-container h2 {
-  font-size: 60px;
+.greeting-container {
+  position: relative;
+  margin-bottom: 2em;
 }
 
 .greeting {
+  margin-right: 0.7em;
   animation: textColor 7s ease infinite;
 }
+.greeting-subline span:nth-child(2) {
+  font-size: 0.7em;
+}
 
+.hero-container h2 {
+  font-size: 2.5em;
+  align-self: center;
+  margin-left: 0.1em;
+}
+
+.hero-container h1 {
+  color: var(--primary);
+  font-size: 5rem;
+  margin-top: -0.5em;
+}
+
+.btn-mobile {
+  display: block;
+  text-decoration: none;
+}
+.btn {
+  width: 100%;
+}
+/* Currently not present in hero-section - keep for future */
 .hero-container > p {
-  color: #fff;
+  color: var(--primary);
   font-size: 32px;
   margin-top: 8px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -50,43 +72,6 @@ video {
   margin: 6px;
 }
 
-@media screen and (max-width: 960px) {
-  .hero-container h1 {
-    font-size: 100px;
-    margin-top: -30px;
-  }
-
-  .hero-container h2 {
-    font-size: 50px;
-    /* margin-top: -100px; */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hero-container h1 {
-    font-size: 80px;
-    margin-top: -20px;
-  }
-
-  .hero-container h2 {
-    font-size: 40px;
-    /* margin-top: 50px; */
-  }
-
-  .btn-mobile {
-    display: block;
-    text-decoration: none;
-  }
-  .btn {
-    width: 100%;
-  }
-  /* Currently not present in hero-section - keep for future */
-  .hero-container > p {
-    font-size: 10px;
-  }
-  /* Currently not present in hero-section - keep for future */
-}
-
 @keyframes animateGlow {
   0% {
     background-position: 0% 50%;
@@ -98,14 +83,6 @@ video {
     background-position: 0% 50%;
   }
 }
-
-.avatar {
-  background-color: #000;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
 .hero-container::after {
   position: absolute;
   content: "";
@@ -121,24 +98,12 @@ video {
   -moz-filter: blur(5vw);
   -ms-filter: blur(5vw);
   filter: blur(5vw);
-  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background: var(--gradientFull);
   background-size: 200% 200%;
   animation: animateGlow 10s ease infinite;
 }
 
-.bioContainer {
-  padding: 4rem;
-}
-
-.bioTwo {
-  font-size: 10p;
-}
-
 /* Button */
-:root {
-  --primary: #fff;
-}
-
 .btn {
   padding: 8px 20px;
   border-radius: 2px;
@@ -149,13 +114,13 @@ video {
 
 .btn--primary {
   background-color: var(--primary);
-  color: #242424;
+  color: var(--secondary);
   border: 1px solid var(--primary);
 }
 
 .btn--outline {
   background-color: transparent;
-  color: #fff;
+  color: var(--primary);
   padding: 8px 20px;
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
@@ -167,35 +132,42 @@ video {
 }
 
 .btn--large {
-  padding: 12px 26px;
-  font-size: 20px;
+  padding: 20px 26px;
+  font-size: 1rem;
 }
 
 .btn--medium:hover,
 .btn--large:hover {
-  background: #fff;
+  background: var(--primary);
   color: #242424;
   transition: all 0.3s ease-out;
-}
-
-/* Currently not present in hero-section - keep for future */
-
-/* Div with Pulsing Glow */
-.hero-container {
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-  /* background-color: #151823; */
-  /* animation: textColor 10s ease infinite; */
-  overflow: hidden;
 }
 
 @keyframes textColor {
   0%,
   100% {
-    color: #7e0fff;
+    color: var(--gradientOne);
   }
   50% {
-    color: #0fffc1;
+    color: var(--gradientTwo);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .greeting-container {
+    position: relative;
+    transform: scale(1.5);
+    margin-bottom: 5rem;
+  }
+
+  .btn--large {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .greeting-container {
+    transform: scale(2);
+    margin-bottom: 5rem;
   }
 }

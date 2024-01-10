@@ -25,7 +25,10 @@ function ContactForm() {
 
   return (
     <>
-      <div className={styles["section__container"]} id="contact">
+      <div
+        className={`section__container ${styles.section__container}`}
+        id="contact"
+      >
         <h2>Let's Talk</h2>
         <div className={styles["contact__container"]}>
           <p className={styles["contact__description"]}>

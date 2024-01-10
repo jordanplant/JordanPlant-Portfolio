@@ -10,10 +10,6 @@
   --secondaryDark: #242222;
 }
 
-.section__container {
-  padding: 4rem;
-}
-
 .contact__container {
   padding: 0rem 2rem;
 }
@@ -163,7 +159,9 @@ button {
   background-size: 200% 200%;
   border-radius: 5px;
   filter: blur(8px);
+  opacity: 0;
   animation: buttonAnimateGlow 10s ease infinite;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .contact__button > button {
@@ -203,5 +201,8 @@ button {
 
 .contact__button:focus-within::before,
 .contact__button:hover::before {
+  opacity: 1;
+}
+.contact__button > button:hover::before {
   opacity: 1;
 }

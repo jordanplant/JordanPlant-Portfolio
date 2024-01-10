@@ -41,7 +41,10 @@ function Projects() {
       : [];
 
   return (
-    <div className={styles["section__container"]} id="projects">
+    <div
+      className={`section__container ${styles.section__container}`}
+      id="projects"
+    >
       <h2>Projects</h2>
       <div className={styles["cards__container"]}>
         <div className={styles["cards__wrapper"]}>

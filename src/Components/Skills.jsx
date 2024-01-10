@@ -35,7 +35,10 @@ const Skills = () => {
 
   return (
     <>
-      <div className={styles["section__container"]} id="skills">
+      <div
+        className={`section__container ${styles.section__container}`}
+        id="skills"
+      >
         <h2>Skills</h2>
         <div className={styles["skills__icons"]}>{renderSkills(true)}</div>
         <h3>Currently Learning</h3>
