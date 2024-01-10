@@ -153,11 +153,20 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+/* RESPONSIVE CONSTRAINTS */
+@media only screen and (min-width: 600px) {
   .greeting-container {
-    position: relative;
     transform: scale(1.5);
     margin-bottom: 5rem;
+  }
+  .btn--large {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .greeting-container {
+    transform: scale(1.5);
   }
 
   .btn--large {
@@ -168,6 +177,5 @@
 @media only screen and (min-width: 1200px) {
   .greeting-container {
     transform: scale(2);
-    margin-bottom: 5rem;
   }
 }
