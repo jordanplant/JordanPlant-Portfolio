@@ -1,6 +1,6 @@
 :root {
   --gradientColorOne: #0fffc1;
-  --gradientColorTwo: rgba(71, 135, 224);
+  --gradientColorTwo: #4787e0;
   --gradientColorThree: #7e0fff;
   --primaryDark: linear-gradient(
     90deg,
@@ -47,7 +47,7 @@ button {
   bottom: -2px;
   z-index: -1;
   background: var(--gradientColorOne);
-  border-radius: 0px;
+  border-radius: 10px;
   filter: blur(8px);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -67,9 +67,8 @@ button {
 
 .name__inputArea > input {
   background-color: #fff;
-  padding: 5px;
-  border: none;
-  outline: none;
+  border: 1px solid rgba(15, 255, 195, 0.6);
+  padding: 10px;
 }
 
 .email__inputArea::before {
@@ -81,7 +80,7 @@ button {
   bottom: -2px;
   z-index: -1;
   background: var(--gradientColorTwo);
-  border-radius: 0px;
+  border-radius: 10px;
   filter: blur(8px);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -93,6 +92,7 @@ button {
 }
 
 .email__inputArea {
+  background-color: #fff;
   position: relative;
   z-index: 1;
   margin: 10px 0;
@@ -101,9 +101,8 @@ button {
 
 .email__inputArea > input {
   background-color: #fff;
-  padding: 5px;
-  border: none;
-  outline: none;
+  border: 1px solid rgba(72, 135, 224, 0.6);
+  padding: 10px;
 }
 
 .message__textArea::before {
@@ -115,7 +114,7 @@ button {
   bottom: -2px;
   z-index: -1;
   background: var(--gradientColorThree);
-  border-radius: 0px;
+  border-radius: 10px;
   filter: blur(8px);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -137,8 +136,7 @@ button {
 .message__textArea > textarea {
   background-color: #fff;
   padding: 10px;
-  border: none;
-  outline: none;
+  border: 1px solid rgba(127, 15, 255, 0.6);
 }
 
 @keyframes buttonAnimateGlow {
@@ -153,19 +151,7 @@ button {
   }
 }
 
-.contact__button > button {
-  font-size: 20px;
-  background-color: #fff;
-  text-align: center;
-  padding: 5px;
-}
-
-.contact__button > button:active {
-  color: #fff;
-  background: var(--primaryDark);
-}
-
-.contact__button::before {
+.contact__button > button::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -175,14 +161,47 @@ button {
   z-index: -1;
   background: linear-gradient(270deg, #0fffc1, #7e0fff);
   background-size: 200% 200%;
-  /* border-radius: 15px; */
+  border-radius: 5px;
   filter: blur(8px);
+  animation: buttonAnimateGlow 10s ease infinite;
+}
+
+.contact__button > button {
+  margin: 10px 0;
+  position: relative;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  font-size: 20px;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
   animation: buttonAnimateGlow 5s ease infinite;
 }
 
-.contact__button {
-  position: relative;
-  z-index: 1;
-  margin: 10px 0;
-  display: flex;
+.contact__button > button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: 12px;
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  animation: buttonAnimateGlow 5s ease infinite;
+}
+
+.contact__button > button:active {
+  color: #fff;
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  animation: buttonAnimateGlow 5s ease infinite;
+}
+
+.contact__button:focus-within::before,
+.contact__button:hover::before {
+  opacity: 1;
 }
