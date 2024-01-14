@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
-import { Button } from "./Button";
-import styles from "./HeroSection.module.css"; // Import the CSS module as 'styles'
+import { Button } from "../Components/Button";
+import styles from "../Sections/HeroSection.module.css"; // Import the CSS module as 'styles'
 
 function HeroSection() {
   return (

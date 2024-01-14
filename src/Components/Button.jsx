@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./HeroSection.module.css";
+import styles from "../Sections/HeroSection.module.css";
 
 const STYLES = [styles["btn--primary"], styles["btn--outline"]];
 const SIZES = [styles["btn--medium"], styles["btn--large"]];

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Logo.module.css"; // Import the CSS module as 'styles'
+import styles from "../Components/Logo.module.css"; // Import the CSS module as 'styles'
 
 const Logo = ({ includeSlash = false }) => {
   return (

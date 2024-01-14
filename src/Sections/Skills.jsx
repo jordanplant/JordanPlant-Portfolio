@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery, gql } from "@apollo/client";
-import SkillIcon from "./SkillIcon";
-import styles from "./Skills.module.css";
+import SkillIcon from "../Components/SkillIcon";
+import styles from "../Sections/Skills.module.css";
 
 const GET_SKILLS = gql`
   query skills {

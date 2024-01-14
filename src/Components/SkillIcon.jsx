@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Skills.module.css";
+import styles from "../Sections/Skills.module.css";
 
 const SkillIcon = ({ skill }) => {
   const [hover, setHover] = useState(false); // State to manage hover

@@ -1,5 +1,5 @@
 import React from "react";
-import CardItem from "./CardItem";
+import CardItem from "../Components/CardItem";
 import styles from "./Projects.module.css";
 import { useQuery, gql } from "@apollo/client";
 
