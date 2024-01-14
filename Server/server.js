@@ -22,9 +22,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// console.log("EMAIL_USER:", process.env.EMAIL_USER);
-// console.log("EMAIL_PASSWORD:", process.env.EMAIL_PASSWORD);
-
 function sendMail(formData) {
   return new Promise((resolve, reject) => {
     const transporter = nodemailer.createTransport({
