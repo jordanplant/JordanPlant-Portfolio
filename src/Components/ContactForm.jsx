@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
+import axios from "axios";
+
+const serverURL = "http://localhost:5170";
 
 function ContactForm() {
+  // Removed unused state variables
+
   const initialState = {
     name: "",
     email: "",
     message: "",
   };
+
   const [formData, setFormData] = useState(initialState);
 
   const handleChange = (e) => {
@@ -19,9 +25,21 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
-    // Additional submission logic goes here
+
+    sendMail(formData); // Call sendMail function
     setFormData(initialState); // Reset the form
   };
+
+  function sendMail() {
+    if (formData && formData.email && formData.message) {
+      axios
+        .post(`${serverURL}/send-email`, formData) // Adjust URL to your Express endpoint
+        .then(() => alert("Message sent successfully"))
+        .catch((error) => console.error("Error:", error));
+      return;
+    }
+    return alert("Fill in all the fields to continue");
+  }
 
   return (
     <>
@@ -54,7 +72,7 @@ function ContactForm() {
               <div className={styles["email__inputArea"]}>
                 <input
                   type="email"
-                  name="email"
+                  name="email" // This 'name' attribute should match the property in 'formData'
                   placeholder="Enter Your Email Address"
                   value={formData.email}
                   onChange={handleChange}
@@ -74,7 +92,9 @@ function ContactForm() {
               </div>
             </label>
             <div className={styles["contact__button"]}>
-              <button type="submit">Send</button>
+              <button onClick={() => sendMail()} type="submit">
+                Send
+              </button>
             </div>
           </form>
         </div>
