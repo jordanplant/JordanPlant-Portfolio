@@ -19,6 +19,7 @@
   object-fit: contain;
   overflow: hidden;
   color: var(--primary);
+  text-align: center;
 }
 
 .greeting-container {
@@ -32,6 +33,13 @@
 }
 .greeting-subline span:nth-child(2) {
   font-size: 0.7em;
+}
+
+.message-subline {
+  display: flex;
+  flex-direction: column;
+  padding: 0em 1.65em;
+  font-size: 1.35em;
 }
 
 .hero-container h2 {
@@ -62,14 +70,11 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
-.hero-btns {
-  /* margin-top: 32px; */
+.hero-btns a {
   display: flex;
   justify-content: center;
-}
-
-.hero-btns .btn {
-  margin: 6px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 @keyframes animateGlow {
@@ -132,7 +137,7 @@
 }
 
 .btn--large {
-  padding: 20px 26px;
+  padding: 15px 10px;
   font-size: 1rem;
 }
 
@@ -159,6 +164,11 @@
     transform: scale(1.5);
     margin-bottom: 5rem;
   }
+
+  .message-subline {
+    padding: 0em 9em;
+    font-size: 1.35em;
+  }
   .btn--large {
     font-size: 1.5rem;
   }
@@ -170,6 +180,7 @@
   }
 
   .btn--large {
+    margin-top: 1.5em;
     font-size: 2rem;
   }
 }

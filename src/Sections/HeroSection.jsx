@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import { Button } from "../Components/Button";
-import styles from "../Sections/HeroSection.module.css"; // Import the CSS module as 'styles'
+import styles from "../Sections/HeroSection.module.css";
 
 function HeroSection() {
   return (
@@ -12,16 +12,21 @@ function HeroSection() {
           <span>I'm</span>
         </h2>
         <h1>Jordan</h1>
+        <h3 className={styles["message-subline"]}>
+          <span>and I'm on my way to becoming</span>
+          <span>a Software Engineer!</span>
+        </h3>
       </div>
       <div className={styles["hero-btns"]}>
-        <Button
-          className={styles["btns"]}
-          buttonStyle={styles["btn--outline"]}
-          buttonSize={styles["btn--large"]}
-        >
-          Get started
-        </Button>
-        {/* Additional buttons or content */}
+        <a href="#about">
+          <Button
+            className={styles["btns"]}
+            buttonStyle={styles["btn--outline"]}
+            buttonSize={styles["btn--large"]}
+          >
+            Get to know me
+          </Button>
+        </a>
       </div>
     </div>
   );
