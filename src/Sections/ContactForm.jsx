@@ -95,9 +95,7 @@ function ContactForm() {
               </div>
             </label>
             <div className={styles["contact__button"]}>
-              <button onClick={() => sendMail()} type="submit">
-                Send
-              </button>
+              <button type="submit">Send</button>
             </div>
           </form>
         </div>
