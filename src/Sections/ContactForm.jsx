@@ -33,7 +33,7 @@ function ContactForm() {
   function sendMail() {
     if (formData && formData.email && formData.message) {
       axios
-        .post(`${serverURL}/send-email`, formData) // Adjust URL to your Express endpoint
+        .post(`${serverURL}`, formData) // Adjust URL to your Express endpoint
         .then(() => alert("Message sent successfully"))
         .catch((error) => console.error("Error:", error));
       return;
