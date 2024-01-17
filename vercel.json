@@ -4,8 +4,7 @@
       "runtime": "nodejs16.x"
     },
     "api/server.js": {
-      "runtime": "nodejs16.x",
-      "handler": "server/server.js"
+      "runtime": "nodejs16.x"
     }
   },
   "routes": [
