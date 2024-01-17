@@ -59,7 +59,7 @@ function createApp(app, isDev = false) {
   //     .catch((error) => res.status(500).send(error.message));
   // });
 
-  app.post("/send-email", (req, res) => {
+  app.post("/api/send-email", (req, res) => {
     sendMail(req.body)
       .then((response) => res.send(response.message))
       .catch((error) => res.status(500).send(error.message));
