@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
 import axios from "axios";
 
-const serverURL = "http://localhost:5170";
+const serverURL = import.meta.env.VITE_SERVER_URL;
 
 function ContactForm() {
   // Removed unused state variables
@@ -40,6 +40,9 @@ function ContactForm() {
     }
     return alert("Fill in all the fields to continue");
   }
+
+  console.log(serverURL);
+  console.log(import.meta.env);
 
   return (
     <>

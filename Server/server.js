@@ -9,7 +9,7 @@ function createApp(app, isDev = false) {
   if (isDev) {
     app.use(
       cors({
-        origin: "http://localhost:5173", // Allow requests from this origin
+        origin: process.env.ORIGIN_URL, // Allow requests from this origin
         methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Allow these HTTP methods
         credentials: true, // Allow credentials (e.g., cookies)
       })
