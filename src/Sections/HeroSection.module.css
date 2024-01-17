@@ -1,6 +1,8 @@
 :root {
   --primary: #fff;
+  --primaryOpacity: #ffffff80;
   --secondary: #242424;
+  --secondaryOpacity: hsla(0, 0%, 14%, 0.5);
   --gradientOne: #7e0fff;
   --gradientTwo: #0fffc1;
   --gradientFull: linear-gradient(270deg, #0fffc1, #7e0fff);
@@ -64,7 +66,7 @@
 /* Currently not present in hero-section - keep for future */
 .hero-container > p {
   color: var(--primary);
-  font-size: 32px;
+  /* font-size: 32px; */
   margin-top: 8px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -146,6 +148,7 @@
   background: var(--primary);
   color: #242424;
   transition: all 0.3s ease-out;
+  animation: textColor 5s ease infinite;
 }
 
 @keyframes textColor {

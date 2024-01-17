@@ -30,7 +30,12 @@ const Skills = () => {
     return data.skillsIcons
       .filter((skill) => skill.doIKnowIt === knowIt)
       .sort((a, b) => a.ranking - b.ranking)
-      .map((skill, index) => <SkillIcon key={index} skill={skill} />);
+      .map((skill, index) => (
+        <div key={index}>
+          <SkillIcon skill={skill} />
+          <p>{skill.skill}</p>
+        </div>
+      ));
   };
 
   return (
@@ -41,8 +46,9 @@ const Skills = () => {
       >
         <h2>Skills</h2>
         <div className={styles["skills__icons"]}>{renderSkills(true)}</div>
-        <h3>Currently Learning</h3>
-        <div className={styles["skills__icons"]}>{renderSkills(false)}</div>
+        {/* below hidden to be used for future */}
+        {/* <h3>Currently Learning</h3>
+        <div className={styles["skills__icons"]}>{renderSkills(false)}</div> */}
       </div>
     </>
   );

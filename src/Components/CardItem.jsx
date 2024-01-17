@@ -3,7 +3,7 @@ import styles from "../Sections/Projects.module.css";
 
 function CardItem(props) {
   return (
-    <li className={styles["cards__item"]}>
+    <li className={`${styles["cards__item"]} halo-effect`}>
       <div
         className={styles["cards__item__pic-wrap"]}
         data-category={props.label}

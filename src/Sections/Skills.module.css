@@ -25,7 +25,6 @@
 }
 
 .skills__icons {
-  /* padding: 50px; */
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -40,4 +39,9 @@
 
 .skills__icons > * {
   padding: 20px;
+}
+
+.skills__icons p {
+  text-align: center;
+  font-family: 1em;
 }

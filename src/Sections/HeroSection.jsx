@@ -13,8 +13,7 @@ function HeroSection() {
         </h2>
         <h1>Jordan</h1>
         <h3 className={styles["message-subline"]}>
-          <span>and I'm on my way to becoming</span>
-          <span>a Software Engineer!</span>
+          and I'm a Software Engineer!
         </h3>
       </div>
       <div className={styles["hero-btns"]}>

@@ -47,6 +47,40 @@ h3 {
   padding: 2rem;
 }
 
+/* Halo Effect */
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.halo-effect {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+.halo-effect::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: animateGlow 10s ease infinite;
+}
+
 /* PROJECTS */
 
 /* RESPONSIVE CONSTRAINTS */
