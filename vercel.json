@@ -1,18 +1,13 @@
 {
-  "functions": [
-    {
-      "src": "api/**/*.js",
+  "functions": {
+    "api/**/*.js": {
       "runtime": "nodejs16.x"
     },
-    {
-      "src": "api/server.js",
-      "runtime": "nodejs16.x"
-    },
-    {
-      "src": "api",
+    "api/server.js": {
+      "runtime": "nodejs16.x",
       "handler": "server/server.js"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/send-email",
