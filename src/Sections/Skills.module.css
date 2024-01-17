@@ -2,7 +2,6 @@
   padding: 00px 0px 20px 0px;
 }
 .section__container h3 {
-  /* font-size: 30px; */
   padding: 20px 0px 00px 0px;
 }
 
@@ -30,6 +29,7 @@
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 0px;
 }
 
 .skills__icons img {
@@ -37,11 +37,22 @@
   width: 96px;
 }
 
-.skills__icons > * {
-  padding: 20px;
-}
-
 .skills__icons p {
   text-align: center;
   font-family: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+}
+.skills__icons > * {
+  /* padding: 20px; */
+}
+
+@media only screen and (min-width: 1024px) {
+}
+.skills__icons > * {
+  padding: 2em;
+}
+
+@media only screen and (min-width: 1200px) {
 }

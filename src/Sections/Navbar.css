@@ -110,6 +110,7 @@
   }
 
   .nav-menu.active {
+    justify-content: flex-start;
     background: #242222;
     left: 0;
     opacity: 1;

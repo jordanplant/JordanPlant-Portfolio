@@ -30,32 +30,6 @@
   border-radius: 50%;
 }
 
-@keyframes animateGlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.about__avatar img::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  z-index: -1;
-  background: linear-gradient(270deg, #0fffc1, #7e0fff);
-  background-size: 200% 200%;
-  border-radius: 10px; /* Slightly larger than the card's border-radius */
-  filter: blur(8px); /* Adjust the blur for the halo effect */
-  animation: animateGlow 10s ease infinite;
-}
-
 /* RESPONSIVE CONSTRAINTS */
 
 @media only screen and (min-width: 600px) {

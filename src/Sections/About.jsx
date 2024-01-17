@@ -25,8 +25,10 @@ const About = () => {
             </p>
           </div>
 
-          <div className={styles.about__avatar}>
-            <img src="/JP_HEADSHOT.jpg"></img>
+          <div
+            className={`${styles.about__avatar} halo-effect circular-halo-effect`}
+          >
+            <img src="/JP_HEADSHOT.jpg" alt="avatar"></img>
           </div>
         </div>
       </div>
