@@ -23,7 +23,7 @@ const About = () => {
               excited to fuse my artistic insights with cutting-edge technical
               skills, aiming to craft web experiences that captivate and engage.
             </p>
-            <h4>See my work and projects below</h4>
+            <h4>Check out my projects below!</h4>
           </div>
 
           <div
