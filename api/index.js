@@ -6,4 +6,4 @@ import createApp from "../Server/server.js";
 
 createApp(app);
 
-module.exports = app;
+export default app;
