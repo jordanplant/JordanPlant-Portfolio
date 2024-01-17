@@ -1,8 +1,6 @@
 import React from "react";
-import { Button } from "../Components/Button";
-import styles from "./Footer.module.css"; // Import the CSS module as 'styles'
+import styles from "./Footer.module.css";
 import Logo from "../Components/Logo";
-import ContactForm from "./ContactForm";
 
 function Footer() {
   return (

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .section__container h2 {
   padding: 00px 0px 20px 0px;
 }
@@ -12,22 +19,39 @@
 
 .skill__icon {
   padding: 3em 0.5em;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out,
+    -webkit-filter 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,
+    -webkit-filter 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out,
+    -webkit-transform 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
 }
 
 .skill__icon:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 /* DYNAMICALLY ADD ICON COLOR TO SHADOW */
 .hover {
+  -webkit-filter: drop-shadow(0 0 10px var(--hover-shadow-color));
   filter: drop-shadow(0 0 10px var(--hover-shadow-color));
 }
 
 .skills__icons {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0px;
 }

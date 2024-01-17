@@ -72,7 +72,7 @@ function ContactForm() {
               <div className={styles["email__inputArea"]}>
                 <input
                   type="email"
-                  name="email" // This 'name' attribute should match the property in 'formData'
+                  name="email"
                   placeholder="Enter Your Email Address"
                   value={formData.email}
                   onChange={handleChange}

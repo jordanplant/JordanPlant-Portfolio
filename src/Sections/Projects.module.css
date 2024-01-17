@@ -1,6 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .cards__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 1120px;
   margin: 0 auto;
@@ -12,14 +26,24 @@
 }
 
 .cards__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .cards__item {
   margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 10px;
   position: relative;
@@ -27,7 +51,12 @@
 
 .cards__item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 1rem;
   border-radius: 0px 0px 10px 10px;
@@ -36,14 +65,24 @@
 
 .cards__item {
   margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 10px 10px 0px 0px;
 }
 
 .cards__item__link {
   font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
   width: 100%;
   overflow: hidden;
@@ -69,6 +108,7 @@
   font-weight: 700;
   color: #fff;
   background-color: #1f98f4;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -83,12 +123,17 @@
   max-width: 100%;
   height: 100%;
   max-height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   border-radius: 10px 10px 0px 00px;
 }
 
 .cards__item__img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -99,12 +144,22 @@
 }
 
 .cards__item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 20px 30px 30px;
   background: #fff;
+  -webkit-box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -124,10 +179,15 @@
 @media only screen and (min-width: 600px) {
   .cards__item {
     margin-bottom: 2rem;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .cards__item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 calc(50% - 20px);
     flex: 1 1 calc(50% - 20px);
   }
 }
@@ -139,11 +199,25 @@
 
   cursor: pointer;
   color: #0e1118;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .card__github:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
   transform: scale(1.5);
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#0fffc1),
+    to(#7e0fff)
+  );
+  background: -o-linear-gradient(right, #0fffc1, #7e0fff);
   background: linear-gradient(270deg, #0fffc1, #7e0fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -151,11 +225,16 @@
 
 @media only screen and (min-width: 1024px) {
   .cards__items {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
   .cards__item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 calc(33.333% - 20px);
     flex: 1 1 calc(33.333% - 20px);
   }
 }
@@ -165,10 +244,3 @@
     width: 84%;
   }
 }
-
-/* NOT USED */
-/* .fade-img {
-  animation-name: fade-img;
-  animation-duration: 2s;
-  border-radius: 10px 10px 0px 00px;
-} */
