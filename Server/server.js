@@ -16,7 +16,7 @@ function createApp(app, isDev = false) {
     );
   }
   app.use(express.json({ limit: "25mb" }));
-  app.use(express.urlencoded({ limit: "25mb" }));
+  app.use(express.urlencoded({ limit: "25mb", extended: true }));
 
   // app.use((req, res, next) => {
   //   res.setHeader("Access-Control-Allow-Origin", "*");
