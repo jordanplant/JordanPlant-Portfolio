@@ -11,7 +11,6 @@ const About = () => {
         <h2>About</h2>
         <div className={styles.about__content}>
           <div className={styles.about__bio__text}>
-            <h4>...on my way to becoming a software engineer! </h4>
             <p>
               After a decade in hospitality managing cinemas across London, I
               took the plunge into a rigorous software engineering bootcamp,
@@ -26,7 +25,9 @@ const About = () => {
             </p>
           </div>
 
-          <div className={styles.about__avatar}></div>
+          <div className={styles.about__avatar}>
+            <img src="public/images/JP_HEADSHOT.jpg"></img>
+          </div>
         </div>
       </div>
     </>

@@ -20,13 +20,40 @@
 .about__bio__text {
   padding: 2em 1em;
 }
-
 .about__avatar {
   margin: 0 auto;
-  background-color: #000;
+}
+.about__avatar img {
+  margin: 0 auto;
   width: 250px;
   height: 250px;
   border-radius: 50%;
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.about__avatar img::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  border-radius: 10px; /* Slightly larger than the card's border-radius */
+  filter: blur(8px); /* Adjust the blur for the halo effect */
+  animation: animateGlow 10s ease infinite;
 }
 
 /* RESPONSIVE CONSTRAINTS */
@@ -49,7 +76,7 @@
     padding: 2em 0;
   }
 
-  .about__avatar {
+  .about__avatar img {
     margin: 0 auto;
     background-color: #000;
     width: 350px;
