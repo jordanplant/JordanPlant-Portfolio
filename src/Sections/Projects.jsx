@@ -53,7 +53,7 @@ function Projects() {
               <CardItem
                 key={item.id}
                 title={item.title}
-                src={item.source?.url || "/images/JP-placeholder-v2.png"}
+                src={item.source?.url || "src/assets/JP-placeholder-v2.png"}
                 text={item.text}
                 label={item.label}
                 path={item.path}
