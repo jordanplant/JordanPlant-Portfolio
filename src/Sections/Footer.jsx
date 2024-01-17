@@ -15,11 +15,11 @@ function Footer() {
               <Logo includeSlash={true} />
             </a>
           </div>
-          {/* <small className={styles["website-rights"]}>JP 2023</small> */}
+
           <div className={styles["social-icons"]}>
             <a
               className={`${styles["social-icon-link"]} ${styles["github"]}`}
-              href="https://github.com/"
+              href="https://github.com/jordanplant"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Github"
@@ -28,25 +28,17 @@ function Footer() {
             </a>
             <a
               className={`${styles["social-icon-link"]} ${styles["linkedin"]}`}
-              href="https://linkedin.com/"
+              href="https://linkedin.com/in/jordanplant"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
               <i className="fab fa-linkedin" />
             </a>
-            <a
-              className={`${styles["social-icon-link"]} ${styles["youtube"]}`}
-              href="https://youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Youtube"
-            >
-              <i className="fab fa-youtube" />
-            </a>
           </div>
         </div>
       </section>
+      <small className={styles["website-rights"]}>JP 2024</small>
     </div>
   );
 }
