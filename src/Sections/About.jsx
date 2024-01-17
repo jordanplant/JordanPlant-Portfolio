@@ -26,7 +26,7 @@ const About = () => {
           </div>
 
           <div className={styles.about__avatar}>
-            <img src="public/static/images/JP_HEADSHOT.jpg"></img>
+            <img src="public/JP_HEADSHOT.jpg"></img>
           </div>
         </div>
       </div>
