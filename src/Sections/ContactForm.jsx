@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
 import axios from "axios";
 
-const serverURL = "http://localhost:5170";
+// const serverURL = "http://localhost:5170";
 
 function ContactForm() {
   // Removed unused state variables
@@ -32,8 +32,10 @@ function ContactForm() {
 
   function sendMail() {
     if (formData && formData.email && formData.message) {
+      axios;
       axios
-        .post(`${serverURL}/send-email`, formData) // Adjust URL to your Express endpoint
+        .post("/api/send-email", formData)
+        // Adjust URL to your Express endpoint
         .then(() => alert("Message sent successfully"))
         .catch((error) => console.error("Error:", error));
       return;
