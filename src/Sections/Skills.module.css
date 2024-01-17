@@ -11,7 +11,7 @@
 }
 
 .skill__icon {
-  padding: 20px;
+  padding: 3em 0.5em;
   transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 
@@ -40,17 +40,18 @@
 .skills__icons p {
   text-align: center;
   font-family: 1em;
+  margin-top: -2em;
 }
 
 @media only screen and (min-width: 600px) {
-}
-.skills__icons > * {
-  /* padding: 20px; */
+  .skill__icon {
+    padding: 3em 3em;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
 }
-.skills__icons > * {
+.skills__icons {
   padding: 2em;
 }
 
