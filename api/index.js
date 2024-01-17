@@ -1,4 +1,6 @@
-const app = require("express")();
+import express from "express";
+
+const app = express();
 
 import createApp from "../Server/server.js";
 
