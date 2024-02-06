@@ -49,8 +49,8 @@
 
 .greeting {
   margin-right: 0.7em;
-  -webkit-animation: textColor 7s ease infinite;
-  animation: textColor 7s ease infinite;
+  -webkit-animation: textColor 10s ease infinite;
+  animation: textColor 10s ease infinite;
 }
 .greeting-subline span:nth-child(2) {
   font-size: 0.7em;
@@ -214,10 +214,10 @@
 @keyframes textColor {
   0%,
   100% {
-    color: var(--gradientOne);
+    color: var(--gradientTwo);
   }
   50% {
-    color: var(--gradientTwo);
+    color: var(--gradientOne);
   }
 }
 
