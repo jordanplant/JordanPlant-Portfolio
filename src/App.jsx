@@ -20,7 +20,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <About />
-      {/* <Projects /> */}
+      <Projects />
       <Skills />
       <ContactForm />
       <Footer />
