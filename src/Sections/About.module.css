@@ -28,12 +28,16 @@
 }
 
 .about__bio__text p:first-child {
-  margin-bottom: -2em;
+  margin-bottom: 2em;
+}
+.about__bio__text p:nth-child(2) {
+  margin-bottom: 2em;
 }
 
 .about__bio__text {
   padding: 2em 1em;
 }
+
 .about__avatar {
   margin: 0 auto;
 }
@@ -61,12 +65,12 @@
   }
 
   .about__bio__text {
-    /* padding: 1em 1em; */
+    padding: 1em 1em;
     flex-grow: 2;
   }
 
   .about__bio__text p {
-    padding: 2em 0;
+    /* padding: 2em 0; */
     font-size: 1.3em;
   }
 
