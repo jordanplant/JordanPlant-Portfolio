@@ -29,16 +29,16 @@
     -webkit-transform 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
 }
 
-.skill__icon:hover {
+/* .skill__icon:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-}
+} */
 /* DYNAMICALLY ADD ICON COLOR TO SHADOW */
-.hover {
+/* .hover {
   -webkit-filter: drop-shadow(0 0 10px var(--hover-shadow-color));
   filter: drop-shadow(0 0 10px var(--hover-shadow-color));
-}
+} */
 
 .skills__icons {
   margin: 0 auto;
