@@ -23,7 +23,7 @@ const GET_CARD_ITEMS = gql`
 function Projects() {
   const { loading, error, data } = useQuery(GET_CARD_ITEMS);
 
-  console.log("PROJECTS Data:", data);
+  // console.log("PROJECTS Data:", data);
 
   if (loading) return <p>Loading...</p>;
   if (error) {
